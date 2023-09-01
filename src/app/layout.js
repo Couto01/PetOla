@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
-import Footer from 'next/footer'
+import Footer from './Footer' // Import Footer component
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,16 +20,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href={metadata.favicon} />
       </Head>
       <body className={inter.className}>{children}</body>
-      <Footer>
-        <p>© 2023 PetOla. Todos os direitos reservados.</p>
-        <p>Contato: petola@gmail.com</p>
-        <p>Siga-nos nas redes sociais:</p>
-        <ul>
-          <li><a href="https://www.facebook.com/petola">Facebook</a></li>
-          <li><a href="https://www.instagram.com/petola">Instagram</a></li>
-          <li><a href="https://www.twitter.com/petola">Twitter</a></li>
-        </ul>
-      </Footer>
+      <Footer /> {/* Include Footer component here */}
     </html>
   )
 }
